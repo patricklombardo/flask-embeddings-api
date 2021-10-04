@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Universal Sentence Encoder (local download)
+universal-sentence-encoder_4
