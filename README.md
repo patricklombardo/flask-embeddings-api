@@ -77,13 +77,11 @@ Error Response:
 # clone the repository
 git clone https://github.com/patricklombardo/flask-embeddings-api.git
 cd flask-embeddings-api
-# Install requirements with pipenv
-# Note: you need to pass the --pre flag for development since black formatter is in pre-release
-pipenv install --pre
-```
+# Create your virtualenv if desired
+# python -m venv
+# . venv/bin/activate
 
-If you don't want to use pipenv, you can install using `requirements.txt` via
-```
+# Install requirements
 pip install -r requirements.txt
 ```
 
