@@ -2,19 +2,19 @@ import tensorflow_hub as hub
 
 
 class EmbeddingsService:
-    def __init__(self, remote=False):
-        self.__remote = remote
+    def __init__(self, library_override=None):
+        self.__library_override = library_override
         self.__ready = False
         self.__embed = None
 
     def load_embed_service(self):
-        if self.__remote:
+        if self.__library_override:
+            self.__embed = hub.load(self.__library_override)
+            self.__ready = True
+        else:
             self.__embed = hub.load(
                 "https://tfhub.dev/google/universal-sentence-encoder/4"
             )
-            self.__ready = True
-        else:
-            self.__embed = hub.load("./universal-sentence-encoder_4")
             self.__ready = True
         return self.__ready
 
