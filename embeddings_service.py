@@ -3,6 +3,11 @@ import tensorflow_hub as hub
 
 class EmbeddingsService:
     def __init__(self, library_override=None):
+        """[summary]
+
+        Args:
+            library_override ([str], optional): Override default location for universal-sentence-encoder (i.e. point to local installation) Defaults to None.
+        """
         self.__library_override = library_override
         self.__ready = False
         self.__embed = None
